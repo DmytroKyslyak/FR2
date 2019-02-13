@@ -38,6 +38,39 @@
 		, name		= 'Jack'
 		;
 		salutation += name +'!';
-		
+	//=============================
+	// true && true
+	// true && false
+	// false && false
+	// true || true
+	// true || false
+	// false || false
+	let countries = {
+			 'ua'   : 'Ukraine'
+			,'by'   : 'Belarus'
+			,'de'   : 'Germany'
+			,'myFunc' : function(){}
+			};
+
+	let city 		= 'Kyiv'
+		, weather 	= 'fine'
+		, isMinsk		= city == 'Minsk'
+		, country		= ''
+		;
+
+		console.log('Is this Minsk? ' + (city == 'Minsk') );
+		console.log('Is this Minsk? ' + isMinsk);
+		console.log('Is this NOT Minsk? ' + !isMinsk);
+		console.log('Is weather fine? ' + (weather == 'fine') );
+		console.log('Is weather rainy? ' + (weather == 'rainy') );
+		console.log('Am I happy? ' + (weather == 'fine' && city == 'Minsk') );
+		console.log('Am I happy? ' + (weather == 'fine' || city == 'Minsk') );
+	//=============================
+	country = 
+		city == "Kyiv" 
+			?"Ukraine"
+			:"other"
+			;
+	
 	</script>
 </html>
