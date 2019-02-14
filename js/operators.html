@@ -66,10 +66,10 @@
 		console.log('Am I happy? ' + (weather == 'fine' && city == 'Minsk') );
 		console.log('Am I happy? ' + (weather == 'fine' || city == 'Minsk') );
 	//=============================
-	country = 
-		city == "Kyiv" 
-			?"Ukraine"
-			:"other"
+	country = 			// цикл на соответствие города стране
+		city == "Kyiv" 	// если город равен Киев
+			?"Ukraine" 	// то страна Украина country = "Ukraine"
+			:"other"	// иначе не Украина country = "other"
 			;
 	
 	</script>

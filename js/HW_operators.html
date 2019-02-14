@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Home Work Operators</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	</body>
+	<script>
+	
+	let a = 20		
+	,b = 10		
+	;
+	a++;
+	b=a++-8;
+	a += 3;		
+	a -= 3;		
+	a *= 3;	
+	a--;
+	a /= 5;		
+	a %= 3;	
+	
+	//=============================
+	let welcomePlane	= 'The passengers flight '
+		, plane		= 'AA7275'
+		, gate		= 'A12'
+		;
+	console.log(welcomePlane += plane +' please register at gate ' + gate);
+	//=============================
+
+	let cake 		= 'Tiramisu'
+		, sugar 	= 'contains'
+		, isPeachPie		= cake == 'PeachPie'
+		, dessert		= ''
+		;
+
+		console.log('Is this PeachPie? ' + (cake == 'PeachPie') );
+		console.log('Is this PeachPie? ' + isPeachPie);
+		console.log('Is this NOT PeachPie? ' + !isPeachPie);
+		console.log('Is sugar contains? ' + (sugar == 'contains') );
+		console.log('Is sugar free? ' + (sugar == 'free') );
+		console.log('Am I happy? ' + (sugar == 'free' && cake == 'Tiramisu') );
+		console.log('Am I happy? ' + (sugar == 'contains' || cake == 'PeachPie') );
+	//=============================
+	sugar = 			// цикл на содержание сахара
+		cake == "Tiramisu" 	// если пироженое Tiramisu
+			?"contains" 	// то сахар - содержится
+			:"free"	// иначе без сахара
+			;
+	console.log("Tiramisu" +' sugar ' + sugar );
+	sugar = 			// цикл на содержание сахара
+		cake == "PeachPie" 	// если пироженое Tiramisu
+			?"contains" 	// то сахар - содержится
+			:"free"	// иначе без сахара
+			;
+	console.log("PeachPie" +' sugar ' + sugar );
+	</script>
+</html>
