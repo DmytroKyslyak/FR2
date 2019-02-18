@@ -8,19 +8,41 @@
 	</body>
 	<script>
 	class Person {
-		constructor (){
-			this.name 		= '';
-			this.surname 	= '';
-			this.sex 		= 'm';
-			this.age 		= 0;
+		constructor (sName, sSurname, sSex, iAge){
+			this.name 		= sName;
+			this.surname 	= sSurname;
+			this.sex 		= sSex;
+			this.age 		= iAge || 0;
 			}
-		greet (){}
+		greet (){
+			//console.log('Hello, ' + this.name + '!'); 
+			console.log(`Hello, ${this.name}!`); //мультистроки
 		}
-	let myFriend1 = new Person();	
-	myFriend1.name 		= 'Jack';
-    myFriend1.surname 	= 'Smith';
-    myFriend1.sex 		= 'm';
-    myFriend1.age 		= 35;
+		}
+	let myFriend1 = new Person('Jack', 'Smith', 'm', 35);	
+	//myFriend1.name 		= 'Jack';
+    //myFriend1.surname 	= 'Smith';
+    //myFriend1.sex 		= 'm';
+    //myFriend1.age 		= 35;
+	myFriend1.greet();
+	
+		let myFriend2 = new Person();	
+	myFriend2.name 		= 'Mary';
+    myFriend2.surname 	= 'Jones';
+    myFriend2.sex 		= 'f';
+    myFriend2.age 		= 26;
+	myFriend2.greet();
+	//====================================
+	
+	let alphabet = ['A', 'b', 'c', 'z']
+		,result = null
+		;
+	
+	result = alphabet.pop();			console.log('***.Результат:', result, 'Массив: ',alphabet);
+	result = alphabet.push('d');		console.log('***.Результат:', result, 'Массив: ',alphabet);
+	result = alphabet.shift();			console.log('***.Результат:', result, 'Массив: ',alphabet);
+	result = alphabet.unshift('a');		console.log('***.Результат:', result, 'Массив: ',alphabet);
+	
 	
 	</script>
 </html>
