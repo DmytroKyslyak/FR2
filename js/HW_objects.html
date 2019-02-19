@@ -7,22 +7,52 @@
 	<body>
 	</body>
 	<script>
-	class Student {
-		constructor (){
-			this.name 		= '';
-			this.surname 	= '';
-			this.cours 		= '';
-			this.phone 		= 0;
-			this.mail 		= '';
+	class Person {
+		constructor (sName, sSurname, sCours, iPhone, sMail){
+			this.name 		= sName;
+			this.surname 	= sSurname;
+			this.cours 		= sCours;
+			this.phone 		= iPhone || 0;
+			this.mail 		= sMail;
 			}
-		greet (){}
+		greet() {
+		console.log(`Welcome Infopulse ${this.name}. Your cours is ${this.cours}.`);
+		console.log(`We will call you by phone ${this.phone}`);
 		}
-	let jsStudent = new Student();	
-	jsStudent.name 		= 'Taras';
-    jsStudent.surname 	= 'Kobzar';
-    jsStudent.cours 	= 'JavaScript';
-    jsStudent.phone 	= 380985554433;
-	jsStudent.mail 		= 'Smith@i.ua';
+		}
+	let Student1 = new Person('Taras', 'Kobzar', 'JavaScript', +380985554433, 'Smith@i.ua');	
+	//Student1.name 		= 'Taras';
+    //Student1.surname 	= 'Kobzar';
+    //Student1.cours 	= 'JavaScript';
+    //Student1.phone 	= 0985554433;
+	//Student1.mail 	= 'Smith@i.ua';
+		Student1.greet();
 	
+	let Student2 = new Person();	
+	Student2.name 		= 'Anna';
+    Student2.surname 	= 'Moroz';
+    Student2.cours 	= 'Quality Assurance';
+    Student2.phone 	= 0739996699;
+	Student2.mail 		= 'Moroz@i.ua';
+		Student2.greet();
+		
+		let Student3 = new Person();	
+	Student3.name 		= 'Denis';
+    Student3.surname 	= 'Kaban';
+    Student3.cours 	= 'Quality Assurance';
+    Student3.phone 	= 0664442244;
+	Student3.mail 		= 'Kaban@i.ua';
+		Student3.greet();
+		
+//=============================
+		let auto = ['Acura', 'BMW', 'Mersedes', 'Toyota']
+			, result = null
+			;
+		result = auto.pop(); 			console.log('***.Результат:', result, 'Массив: ',auto);
+		result = auto.push('VW');	console.log('***.Результат:', result, 'Массив: ',auto);
+		result = auto.shift();			console.log('***.Результат:', result, 'Массив: ',auto);
+		result = auto.unshift('Audi');	console.log('***.Результат:', result, 'Массив: ',auto);
+		
+			
 	</script>
 </html>
