@@ -63,6 +63,10 @@
 		console.log (myStringFly.replace(/[^,0-9]/gi,'').split(','))
 		console.log (myStringFly.replace(/[^,0-9]/gi,'').split(',').slice(1,2))
 		console.log (myStringFly.match(/[A-z]{2,3}-[0-9]{2,4}/g))
-		
+//=============================№7		
+		d=newDate([Y,M,D,h,m,s,ms]);
+		//d=newDate([2018,03,11,15,00,00,00]);
+		d.setTime([2018,03,11,15,00,00,00])
+		console.log (d.getTime())
 	</script>
 </html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Objects</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	</body>
+	<script>
+	let sText = 'JavaScript is the Programming Language for the Web.'
+	,reversedText = '';
+for (let i=0; i < sText.length; i+=2){
+	reversedText += sText.charAt(i+1) + sText.charAt(i);
+	}
+		console.log(reversedText)
+	
+//---------------------Loop2	
+let proverb = 'quick fox jumped over the lazy dog'
+, tmp = null;
+
+let introArray = Array.from(proverb);
+for (let i = 0; i < proverb.length; i+=2){ 
+	tmp = introArray[i]; 
+	introArray[i] = introArray[i+1]; 
+	introArray[i+1] = tmp; 
+	}
+console.log(introArray.join(''))
+//---------------------Date
+
+let currentTime = new Date();
+//let fortnightAway = new Date(+currentTime + 12096e5);
+let fortnightAway = new Date(currentTime.getTime() + 1000*60*60*24*14);
+
+//---------------------Date2
+let present = new Date();
+    console.log(`${present.getDate()} day, ${present.getHours()} hour, ${present.getMinutes()} minute, ${present.getSeconds()} second`);
+
+    let future = new Date();
+    future.setDate(present.getDate()+14);
+    console.log(`${future.getDate()} day, ${future.getHours()} hour, ${future.getMinutes()} minute`);
+
+
+	</script>
+</html>
