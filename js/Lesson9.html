@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Adder</title>
+		<meta charset='utf-8'>
+	</head>
+	<body>
+	</body>
+	<script>
+/*
+	var add = (
+	function () {
+		var counter = 0; 
+		return function () {
+			return counter++;
+			}
+		}
+	)();
+*/	
+	class Adder{
+		constructor(){
+			this.counter = 0;		
+			}			
+		add(){
+			return this.counter++;
+		}
+	}
+let oAdder = new Adder(); // экземпляр класса это и есть объект	
+
+//------------------------------- Рекурсия
+	
+	function recursion(x){
+	if (x>0){			// Условие, по которому функция решает
+		console.log("Beep "+x+"!");
+		return recursion(--x); 	// когда вызывать себя заново
+		}
+	else {
+		return // without recursion ;			// а когда заканчивать
+		}
+	}
+//---------------------
+	function factorial(n){
+		if (n>0){
+			return n* factorial (n-1);
+		}
+	else if (n==0) {
+		return 1;
+		}
+	}
+//---------------------
+
+
+	</script>
+</html>
