@@ -6,7 +6,7 @@ class b_form {
 	
 	showInfo(event){ // метод
 		// currentTarget - ссылка на него, с чем происходит работа
-		let jpFormOKButton = $(event.currentTarget);
+		let jqFormOKButton = $(event.currentTarget);
 		
 		this.form.find('.b-form__season')	// обект 
 			.each(							// цикл
