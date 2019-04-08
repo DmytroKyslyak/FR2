@@ -5,12 +5,7 @@ class b_form {
 	}
 	getLanguages(){
 				let 
-			oLanguages = {	
-				 "ru"	: "Русский"
-				,"en"	: "Английский"
-				,"uk"	: "Украинский"
-				,"de"	: "Немецкий"
-				}
+			oLanguages = settings.get('langs')
 			,sLanguages = ''
 			;
 		$.each(oLanguages,(sLanguageCode,sLanguageName)=>{	//$. возвращение jq обект
@@ -82,7 +77,7 @@ class b_form {
 		+ `\n${this.label('.b-form__label_fruit')}: `	+ this.val('.b-form__fruit')
 		+ `\n${this.label('.b-form__label_animals')}: `	+ this.val('.b-form__animals')//.html()
 		+ `\n${this.label('.b-form__label_review')}: `	+ this.val('.b-form__review')
-		+ '\nЯзыки:\n'									+ this.getLanguages()
+		+ `\n${settings.get('b-form__languages')}:\n`	+ this.getLanguages()
 		);
 	} 
 	
