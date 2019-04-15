@@ -1,18 +1,8 @@
-class b_gallery /* extends Component */ {
+class b_gallery extends Component {
 	constructor(sSelector){
-		this.gallery = $(sSelector);
-		
-		this.pictures 		= this.gallery.find('.b-picture');
-		this.preview 		= this.gallery.find('.b-preview');
-		this.arrowPrev 		= this.gallery.find('.b-preview__arrow_prev');
-		this.arrowNext 		= this.gallery.find('.b-preview__arrow_next');
-		this.previewImage 	= this.gallery.find('.b-preview__image');
-		this.previewText 	= this.gallery.find('.b-preview__text');
-		this.currentImageNumber = 0;
-		
-		this.createEvents();
+		super(sSelector);
 		}
-
+	
 	showPreview(event){ 
 		let 
 		jqPicture = $(event.currentTarget); 	//jqPicture - small везде
@@ -24,7 +14,14 @@ class b_gallery /* extends Component */ {
 		this.preview.addClass('b-preview_shown');
 		}
 		
-    hidePreview 	(event){ }
+    hidePreview 	(event){ 
+		console.log('hidePreview(event)',event)
+		
+		if ($(event.target).hasClass('b-preview')){
+			this.preview.removeClass('b-preview_shown');
+		}
+		
+	}
 	
 	showImage(iStep){
 		this.currentImageNumber +=iStep;
@@ -41,6 +38,15 @@ class b_gallery /* extends Component */ {
 	showPrevious 	(event){this.showImage(-1); }
     showNext 		(event){this.showImage(+1); }
 	
+	createProperties(){
+		this.pictures 		= this.find('.b-picture');
+		this.preview 		= this.find('.b-preview');
+		this.arrowPrev 		= this.find('.b-preview__arrow_prev');
+		this.arrowNext 		= this.find('.b-preview__arrow_next');
+		this.previewImage 	= this.find('.b-preview__image');
+		this.previewText 	= this.find('.b-preview__text');
+		this.currentImageNumber = 0;		
+	}
 	
 	createEvents(){
 		this.pictures 	.click(this.showPreview.bind(this));
