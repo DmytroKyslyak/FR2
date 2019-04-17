@@ -26,7 +26,7 @@ box-shadow:		0 0 2px red;
     position: absolute;
 }
 .b-textfield_error + .tooltip {
-    display: inline-block;
+    1display: inline-block;
 }
 .b-form__ok-button{
 	    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
