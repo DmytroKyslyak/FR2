@@ -255,4 +255,11 @@ this.form.find('.b-form__ok-button').click(this.showInfo.bind(this));
 /. любой символ
 
 username [a-z0-9\.\-_]{1,255}
+Лекция№21
+Форматы записей:
+1. let regexp = new Regexp(sRegRep, sFlags);
+ рег выражение    ^...$
+2. let regexp = /^...$/i;
+
+
 

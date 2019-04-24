@@ -6,12 +6,20 @@ class form_checker extends Component {
 	check(event){ 
 		event.preventDefault();	//предотвратить реакцию на событие по умолчанию
 		
-		let bFormError = false;
+		let bFormError 	= false
+			,oRegExps 	= settings.get('regexps') 
+			;
 		
 		this.fields.each((i,oField)=>{
-			let jqField = $(oField);
+			let 
+			 jqField = $(oField)
+			,sFieldName	= jqField.attr('name')
+			,sRegExp	= oRegExps[sFieldName]	//массив
+			,oRegExp	= new RegExp(sRegExp, 'i')
+			;
 			
-			if (!jqField.val()){
+					//if (!jqField.val()){
+			if (!jqField.val().match(oRegExp)){
 				bFormError = true;
 				//***2
 				jqField.addClass('b-textfield_error')
