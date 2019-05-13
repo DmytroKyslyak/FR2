@@ -15,5 +15,4 @@ let _page_settings = {
 			}	
 			
 	};
-
 settings.init(_page_settings);

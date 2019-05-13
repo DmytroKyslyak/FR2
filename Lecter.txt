@@ -260,6 +260,6 @@ username [a-z0-9\.\-_]{1,255}
 1. let regexp = new Regexp(sRegRep, sFlags);
  рег выражение    ^...$
 2. let regexp = /^...$/i;
-
+Лекция№22
 
 
