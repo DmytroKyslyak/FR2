@@ -1,0 +1,31 @@
+
+.b-pad {
+    background: none repeat scroll 0 0 #90EE90;
+    height: 555px;
+    width: 555px;
+	position: relative;
+	top:	100px;
+	left: 200px;
+}
+.b-pad__coord {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: inline-block;
+    height: 1em;
+    margin: 5px;
+    width: 255px;
+}
+
+.b-pad__pointer{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    
+}
+
+.b-body__cursor_red-arrow{
+	cursor: move;
+	}
+
+.b-body__cursor_hand{
+	cursor: -webkit-grab;
+	}

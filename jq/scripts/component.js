@@ -3,6 +3,11 @@ class Component{
 		
 		/*when the*/$(document).ready(()=>{
 			this.elem = $(sSelector);	//1.создаем главный html документ.
+			
+			if(!this.elem.length){		// ==0 массив не равен 0
+				throw new Error('Main HTML element is missing by selector:' + sSelector);
+				}
+			
 			this.createProperties();	//2.
 			this.createEvents();		//3.			
 			});

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+		</title>
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>
+		<link rel='stylesheet' href='../stylesheets/window-panel.css'>
+		<script type='text/javascript' src='../scripts/error.js'></script>
+		<script type='text/javascript' src='../scripts/jquery-3.3.1.js'></script>
+	</head>
+	<body>
+		<div class='b-window-panel' id='window-panel1'>
+			<div class='b-window-panel__timers'>
+				<input type='button' value='Start countdown' class='b-window-panel__start-countdown'>
+				<input type='button' value='Stop countdown'  class='b-window-panel__stop-countdown'>
+				<br>
+				<input type='button' value='Start ticker' 	 class='b-window-panel__start-ticker'>
+				<input type='button' value='Stop ticker'  	 class='b-window-panel__stop-ticker'>
+				<br>
+				<input type='button' value='Open window'  	 class='b-window-panel__open-window'>
+				<input type='button' value='Close window'  	 class='b-window-panel__close-window'>
+				<br>
+
+			</div>
+			
+			<div class='popup' id='window1'>
+				<span class='popup__header'>
+					<span class='popup__title'>header</span>
+					<span class='popup__close'>X</span>				
+				</span>
+				<span class='popup__text'>text</span>
+			</div>
+			
+		</div>
+	
+	</body>
+	<script type='text/javascript' src='../scripts/component.js'></script>	
+	<script type='text/javascript' src='../scripts/popup.js'></script>
+	<script type='text/javascript' src='../scripts/window-panel.js'></script>
+	<script>
+	var w1 = new windowPanel('#window-panel1');
+	//var p1 = new Popup('#window1yyy'); делаем ошибку
+	
+	</script>
+</html>
