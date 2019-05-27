@@ -6,9 +6,12 @@ class Popup extends Component {
 	open()	{this.elem.show();}	
 	close()	{this.elem.hide();}
 	
-	createProperties(){}
+	createProperties(){
+		this.closePopupBtn = this.find('.popup__close');
+		
+	}
 	
 	createEvents(){
-		
+		this.closePopupBtn  .click(this.close  .bind(this));
 	}
 }
