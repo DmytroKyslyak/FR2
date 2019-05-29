@@ -6,10 +6,6 @@ class windowPanel extends Component {
 //Методы
 	countdownFinish(){console.log ('Прошло 3 секунды');
 			console.log('countdownFinish this', this);}
-	
-	tickerFinish(){console.log ('Прошло',this.timerId2);}
-			//console.log('Прошло', this);}
-	
 	startCountdown() {
 		this.timerId = window.setTimeout(this.countdownFinish.bind(this), 3000)
 			console.log ('Начат обратный отсчёт');
@@ -18,14 +14,24 @@ class windowPanel extends Component {
 		window.clearTimeout(this.timerId);
 		console.log ('Обратный отсчёт остановлен');
 		}
+		
+		tickerFinish(){
+		this.tickerTime += this.tickerStep;
+			console.log (`Прошло ${this.tickerTime} секунды`);
+		}
+		
 	startTicker(){
-		this.timerId2 = window.setInterval(this.tickerFinish.bind(this), 2000)
-			console.log ('Запущен интервальный таймер');
+		this.tickerId = window.setInterval(this.tickerFinish.bind(this), this.tickerStep * 1000)
+		console.log ('Начат обратный отсчёт');
 		}
+		
 	stopTicker(){
-		window.clearInterval(this.timerId2);
-		console.log ('Остановлет интервальный таймер');
+		this.tickerTime	= 0;
+		window.clearInterval(this.tickerId);
+		console.log ('Обратный отсчёт остановлен');
 		}
+		
+		
 	openWindow(){this.popup.open();}
 	closeWindow(){this.popup.close();}
 
@@ -39,8 +45,11 @@ class windowPanel extends Component {
 		this.closeWindowBtn		= this.find('.b-window-panel__close-window');
 		this.popup              = new Popup('#window1');	//переменная, перенесли с html
 		
-		this.timerId = null;	//переменная для счетчика, число = нул
-		this.timerId2 = null;
+		this.timerId 		= null;	//переменная для счетчика, число = нул
+		
+		this.tickerTime			= 0;
+		this.tickerId			= null;
+		this.tickerStep			= 2;
 	}
 	
 	createEvents(){

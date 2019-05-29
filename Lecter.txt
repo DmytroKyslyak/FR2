@@ -274,6 +274,24 @@ $(temp1).constructor.name - JQuery
 Лекция№25
 Лекция№26
 Ошибки с анэкспектед (unexpected) - то что написали, там где написали не ожидал видеть там
+Лекция№27
+д.з
+- доступ к серверу
+
+- Классы создать - Countdown + Person и ticker, создаем объект, ссылаемся на внешнее действие,  
+class Countdown{
+	timer
+	start()
+	stop()
+	action(){}
+	}
+t1 = new Countdown();  
+t1.action = myFriend.greet.bind(myFriend);
+
+"extends"					Shape > Circle, Polygon (Triangle, Rectangle, ...),   (a kind of) - типа
+"include" - properties		Car has (includes) an engine, a steering wheel, wheels,  - у него есть 
+reference to external 		Timer (action) refers to Person (greet`ing) - ссылается на ..
+props and methods
 
 
 
