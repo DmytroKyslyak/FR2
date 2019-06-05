@@ -1,8 +1,8 @@
 class Component{
-	constructor(sSelector){
-		
+	constructor(sSelector, sAuxSelector){
 		/*when the*/$(document).ready(()=>{
 			this.elem = $(sSelector);	//1.создаем главный html документ.
+			this.auxelem = $(sAuxSelector);
 			
 			if(!this.elem.length){		// ==0 массив не равен 0
 				throw new Error('Main HTML element is missing by selector:' + sSelector);
