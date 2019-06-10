@@ -322,6 +322,23 @@ $(smth).appendTo(a_place)
 /*into*/$(a_place).append(smth)
 
 
+Лекция№30
+Ребята, сегодня тема по фреймворкам и пример приложения на Angular 
+Пожалуйста, для экономии вашего времени установите
+(1)
+https://nodejs.org/dist/v10.16.0/node-v10.16.0-x64.msi
+
+И (2) желательно даже сам ангуляр:
+
+1. Win + R
+2. cmd
+3. Enter
+4. введите в командную строку     npm install -g @angular/cli
+
+http Код 200 ok - проблема бэкэнда
+text = timeout - 
+.status = ...... 401, 402, 403 ...
+
 
 
 
